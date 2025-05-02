@@ -1,5 +1,5 @@
 extends Node3D
-@export var mouse_sensitivity : float = 0.12
+@export var mouse_sensitivity : float = 0.02
 @export var stick_sensitivity : float = 90.0   # deg/sec
 @export var min_pitch : float = -30.0          # look‑up clamp
 @export var max_pitch : float = 45.0           # look‑down clamp
