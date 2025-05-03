@@ -1,11 +1,11 @@
 extends Node3D
+# preload hud scene
+@onready var hud_scene := preload("res://ui/hud.tscn")
 
 func _ready():
-	# Wait one frame so every Star Shard has entered the scene tree
-	await get_tree().process_frame         
-
-	# 1) Count how many shards are present
-	GameState.total_shards = get_tree().get_nodes_in_group("star_shards").size()
+	# Add HUD
+	add_child(hud_scene.instantiate())
 	
-	# 2) Reset the player’s progress for this level
-	GameState.shards_collected = 0
+	await get_tree().process_frame         # let shards add themselves to the group
+	GameState.total_shards      = get_tree().get_nodes_in_group("star_shards").size()
+	GameState.shards_collected  = 0
