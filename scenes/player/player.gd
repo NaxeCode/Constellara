@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 	
-	move_and_slide()
-	
 	if global_transform.origin.y < KILL_PLANE_Y:
 		Respawn.respawn_player(self)
+	
+	move_and_slide()

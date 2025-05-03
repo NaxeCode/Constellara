@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7k1m06lk0qq6"]
+[gd_scene load_steps=7 format=3 uid="uid://c7k1m06lk0qq6"]
 
 [ext_resource type="Script" uid="uid://bk00nxk17edgo" path="res://scenes/world.gd" id="1_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://b13cnej0utfv2" path="res://scenes/player/player.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://cctecm1kxjm4k" path="res://scenes/items/star_shard.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://cfk6eamm1kip8" path="res://scenes/items/checkpoint.tscn" id="4_k0juu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5uuo"]
 
@@ -51,3 +52,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0996447, 2.30225, 2.40953)
 
 [node name="StarShard2" parent="star_shards" instance=ExtResource("2_rwgxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02266, 2.30225, -0.704073)
+
+[node name="Checkpoint" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.27175, 1.5, 4.6623)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42135, 1.5, 7.25402)
