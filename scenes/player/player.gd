@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var accel:float = 12.0
 @export var friction:float = 14.0
 @export var GRAVITY :float = ProjectSettings.get_setting("physics/3d/default_gravity")
+const KILL_PLANE_Y := -20.0
 
 func _physics_process(delta: float) -> void:
 	#1) Read WASD movement as vector2 (-1 .. 1 on each axis)
@@ -34,3 +35,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= GRAVITY * delta
 	
 	move_and_slide()
+	
+	if global_transform.origin.y < KILL_PLANE_Y:
+		Respawn.respawn_player(self)
