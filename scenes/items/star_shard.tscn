@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cctecm1kxjm4k"]
+
+[ext_resource type="Script" uid="uid://bar0s533d6vuf" path="res://scenes/items/star_shard.gd" id="1_30v1f"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8uo82"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_30v1f"]
+
+[node name="StarShard" type="Area3D"]
+collision_layer = 2
+script = ExtResource("1_30v1f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+shape = SubResource("SphereShape3D_8uo82")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+mesh = SubResource("SphereMesh_30v1f")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
