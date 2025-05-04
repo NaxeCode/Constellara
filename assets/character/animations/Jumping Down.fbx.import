@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
-uid="uid://q8e4wpv0ddh5"
-path="res://.godot/imported/scene.gltf-ea3d08f7571d392d0a25082dee2fcc6e.scn"
+type="AnimationLibrary"
+uid="uid://blm1geqmmdv51"
+path="res://.godot/imported/Jumping Down.fbx-b76f2f10b5f98438c81c0aeaafb4980c.res"
 
 [deps]
 
-source_file="res://assets/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-ea3d08f7571d392d0a25082dee2fcc6e.scn"]
+source_file="res://assets/character/animations/Jumping Down.fbx"
+dest_files=["res://.godot/imported/Jumping Down.fbx-b76f2f10b5f98438c81c0aeaafb4980c.res"]
 
 [params]
 
@@ -28,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

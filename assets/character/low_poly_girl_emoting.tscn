@@ -1,0 +1,67 @@
+[gd_scene load_steps=15 format=3 uid="uid://368tregei5w3"]
+
+[ext_resource type="PackedScene" uid="uid://dv762ossrhrim" path="res://assets/character/low-poly-girl-emoting.fbx" id="1_mwu11"]
+[ext_resource type="AnimationLibrary" uid="uid://d0xerpftq6yt6" path="res://assets/character/animations/Idle.fbx" id="2_i60ut"]
+[ext_resource type="AnimationLibrary" uid="uid://blm1geqmmdv51" path="res://assets/character/animations/Jumping Down.fbx" id="3_aniyf"]
+[ext_resource type="AnimationLibrary" uid="uid://rof1yh5actjs" path="res://assets/character/animations/Run Forward.fbx" id="4_vsbgk"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tph1a"]
+animation = &"Idle/mixamo_com"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i60ut"]
+animation = &"Jumping Down/mixamo_com"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aniyf"]
+animation = &"Run Forward/mixamo_com"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vsbgk"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tph1a"]
+xfade_time = 0.3
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8gswf"]
+xfade_time = 0.3
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kwmrs"]
+xfade_time = 0.3
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahnfc"]
+xfade_time = 0.3
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_euc4q"]
+xfade_time = 0.3
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8gswf"]
+states/End/position = Vector2(854.667, 107.185)
+states/Idle/node = SubResource("AnimationNodeAnimation_tph1a")
+states/Idle/position = Vector2(328, 100.444)
+states/Jump/node = SubResource("AnimationNodeAnimation_i60ut")
+states/Jump/position = Vector2(623.333, 100.938)
+states/Run/node = SubResource("AnimationNodeAnimation_aniyf")
+states/Run/position = Vector2(470, 216.074)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_vsbgk"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_tph1a"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_8gswf"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_kwmrs"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_ahnfc"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_euc4q")]
+
+[node name="low-poly-girl-emoting" instance=ExtResource("1_mwu11")]
+
+[node name="Skeleton3D" parent="." index="1"]
+bones/12/rotation = Quaternion(2.08167e-16, 2.77556e-17, -6.93889e-18, 1)
+bones/13/rotation = Quaternion(-2.28983e-16, -1.38778e-17, 3.46945e-17, 1)
+bones/20/rotation = Quaternion(-1.4962e-17, -4.33681e-18, -9.71445e-17, 1)
+bones/21/rotation = Quaternion(5.78964e-17, -5.20417e-18, 6.93889e-18, 1)
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"Idle": ExtResource("2_i60ut"),
+&"Jumping Down": ExtResource("3_aniyf"),
+&"Run Forward": ExtResource("4_vsbgk")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3"]
+tree_root = SubResource("AnimationNodeStateMachine_8gswf")
+anim_player = NodePath("../AnimationPlayer")
