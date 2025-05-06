@@ -49,11 +49,39 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 
 [node name="low-poly-girl-emoting" instance=ExtResource("1_mwu11")]
 
+[node name="Light" parent="." index="0"]
+visible = false
+
 [node name="Skeleton3D" parent="." index="1"]
-bones/12/rotation = Quaternion(2.08167e-16, 2.77556e-17, -6.93889e-18, 1)
+bones/0/position = Vector3(0.0121094, 1.48788, 0.0611788)
+bones/0/rotation = Quaternion(-0.0349214, -0.319306, 0.0245482, 0.94669)
+bones/1/rotation = Quaternion(0.0343681, 0.0137412, -0.00754294, 0.999286)
+bones/2/rotation = Quaternion(0.121353, 0.0285284, -0.0130382, 0.992114)
+bones/3/rotation = Quaternion(0.121361, 0.0285452, -0.0130451, 0.992112)
+bones/4/rotation = Quaternion(0.00162519, 0.0212255, -0.0231253, 0.999506)
+bones/5/rotation = Quaternion(0.0486429, 0.142248, 0.0105762, 0.988579)
+bones/7/rotation = Quaternion(-0.564339, -0.406667, 0.585335, -0.416565)
+bones/8/rotation = Quaternion(0.0528195, -0.227898, 0.0951198, 0.967587)
+bones/9/rotation = Quaternion(0.073339, 0.0561686, 0.312673, 0.945358)
+bones/10/rotation = Quaternion(-0.125082, 0.954366, -0.168844, 0.212208)
+bones/11/rotation = Quaternion(0.0336484, 0.992941, -0.0807274, 0.0801176)
+bones/12/rotation = Quaternion(0.251524, -0.0318451, 0.0274008, 0.966939)
 bones/13/rotation = Quaternion(-2.28983e-16, -1.38778e-17, 3.46945e-17, 1)
-bones/20/rotation = Quaternion(-1.4962e-17, -4.33681e-18, -9.71445e-17, 1)
+bones/15/rotation = Quaternion(0.562279, -0.409407, 0.59369, 0.404674)
+bones/16/rotation = Quaternion(0.0738348, 0.128427, 0.0828421, 0.985491)
+bones/17/rotation = Quaternion(0.0895594, -0.114373, -0.334648, 0.931079)
+bones/18/rotation = Quaternion(-0.17801, -0.100359, -0.0449819, 0.977864)
+bones/19/rotation = Quaternion(0.0359858, -0.00241207, -0.0154034, 0.999231)
+bones/20/rotation = Quaternion(0.0797886, 0.0378412, -0.24802, 0.964722)
 bones/21/rotation = Quaternion(5.78964e-17, -5.20417e-18, 6.93889e-18, 1)
+bones/23/rotation = Quaternion(0.0878714, 0.296544, 0.948163, -0.0729923)
+bones/24/rotation = Quaternion(-0.476167, 0.084032, -0.0539375, 0.873667)
+bones/25/rotation = Quaternion(0.529871, -0.122501, -0.0229793, 0.83887)
+bones/26/rotation = Quaternion(0.285601, 0.0268861, -0.0173978, 0.957814)
+bones/28/rotation = Quaternion(-0.195915, 0.124538, 0.956874, 0.174645)
+bones/29/rotation = Quaternion(-0.542277, -0.00747753, 0.0782343, 0.836516)
+bones/30/rotation = Quaternion(0.592421, 0.171098, 0.072507, 0.783904)
+bones/31/rotation = Quaternion(0.27081, -0.0449299, 0.00127558, 0.961583)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {
