@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	var input_2d = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	
 	#2) Convert to world-space based on the player's orientation
-	var cam_basis = $Sketchfab_Scene/Pivot.global_transform.basis  # path to your Pivot
+	var cam_basis = $"low-poly-girl-emoting"/Pivot.global_transform.basis  # path to your Pivot
 	var direction = (cam_basis * Vector3(input_2d.x, 0, input_2d.y)).normalized()
 	direction.y = 0               # flatten (camera is tilted)
 	direction = direction.normalized()
